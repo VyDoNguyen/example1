@@ -7,5 +7,6 @@ public class Main {
     String a="Project example";
         System.out.println(a);
         System.out.println(x);
+    String b="Test";
     }
 }
