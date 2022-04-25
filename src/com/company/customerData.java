@@ -3,18 +3,12 @@ package com.company;
 import java.util.Scanner;
 
 public class customerData {
-    String Name, address;
-    int phoneNum;
-    String full;
-    customerData(String Name, int phoneNum, String address) {
+    String Name, address, phoneNum;
+    customerData(String Name, String phoneNum, String address) {
         this.Name = Name;
         this.address = address;
         this.phoneNum = phoneNum;
         }
-    public String customerData (String full) {
-        this.full=full;
-       return null;
-    }
     public void Name() {
         System.out.println("Client's name: " + Name);
     }
@@ -27,7 +21,7 @@ public class customerData {
     public static void main(String[] args) {
     //Accounting Firm
     //1. Customer database
-    customerData data= new customerData("Alex",9283,"6424 Circle Street");
+    customerData data= new customerData("Alex Lee","972-975-8335","6424 Circle Street, Elkridge, MD 21075");
     data.Name();
     data.phoneNum();
     data.Address();
