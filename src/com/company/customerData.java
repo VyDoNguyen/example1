@@ -24,19 +24,9 @@ public class customerData {
     public void Address() {
         System.out.println("Client's address: " + address);
     }
-    public String getAddress() {
-        return address;
-    }
-    public String getName() {
-        return Name;
-    }
-    public int getPhoneNum() {
-        return phoneNum;
-    }
     public static void main(String[] args) {
     //Accounting Firm
     //1. Customer database
-    Scanner data1 = new Scanner(System.in);
     customerData data= new customerData("Alex",9283,"6424 Circle Street");
     data.Name();
     data.phoneNum();
