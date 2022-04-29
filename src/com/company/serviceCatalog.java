@@ -4,7 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class serviceCatalog {
-    public static void main(String[] args) {
+    public static void serviceCatalog() {
         String[][] serviceCat = new String[6][4];
         serviceCat[0][0]="Service Line";
         serviceCat[1][0]="Internal Audit";
@@ -45,7 +45,7 @@ public class serviceCatalog {
     }
 
     Scanner employee = new Scanner(System.in);
-    System.out.println("Please choose service line (eg: Accounting) ");
+    System.out.println("Please choose service line (eg: Accounting): ");
     String name = employee.nextLine().toUpperCase();
     switch (name) {
         case "INTERNAL AUDIT":
