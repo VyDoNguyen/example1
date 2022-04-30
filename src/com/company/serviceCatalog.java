@@ -4,7 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class serviceCatalog {
-    public static void main(String[] args) {
+    public static void serviceCatalog() {
         String[][] serviceCat = new String[6][4];
         serviceCat[0][0]="Service Line";
         serviceCat[1][0]="Internal Audit";
@@ -12,18 +12,21 @@ public class serviceCatalog {
         serviceCat[3][0]="Individual Tax";
         serviceCat[4][0]="Consulting";
         serviceCat[5][0]="Accounting";
-        serviceCat[0][1]="Employee ID";
-        serviceCat[1][1]="NF100";
-        serviceCat[2][1]="VN200";
-        serviceCat[3][1]="NH300";
-        serviceCat[4][1]="SD400";
-        serviceCat[5][1]="HA500";
-        serviceCat[0][2]="Staff";
-        serviceCat[1][2]="Noah Fein";
-        serviceCat[2][2]="Vy Nguyen";
-        serviceCat[3][2]="Nhat Han";
-        serviceCat[4][2]="Sophie Dong";
-        serviceCat[5][2]="Harsha Ambaty";
+
+        serviceCat[0][1]="Staff";
+        serviceCat[1][1]="Noah Fein";
+        serviceCat[2][1]="Vy Nguyen";
+        serviceCat[3][1]="Nhat Han";
+        serviceCat[4][1]="Sophie Dong";
+        serviceCat[5][1]="Harsha Ambaty";
+
+        serviceCat[0][2]="Employee ID";
+        serviceCat[1][2]="NF100";
+        serviceCat[2][2]="VN200";
+        serviceCat[3][2]="NH300";
+        serviceCat[4][2]="SD400";
+        serviceCat[5][2]="HA500";
+
         serviceCat[0][3]="Email Address";
         serviceCat[1][3]= "nfein1@umbc.edu";
         serviceCat[2][3]="nguyend4@umbc.edu";
@@ -32,7 +35,7 @@ public class serviceCatalog {
         serviceCat[5][3]="il54815@umbc.edu";
 
     int row= 6;
-    int columns=4 ;
+    int columns=2 ;
     int i,j;
     for(i=0; i<row; i++) {
         for (j=0; j< columns; j++) {
@@ -42,36 +45,36 @@ public class serviceCatalog {
     }
 
     Scanner employee = new Scanner(System.in);
-    System.out.println("Enter Employee ID (eg. AB100): ");
+    System.out.println("Please choose service line (eg: Accounting): ");
     String name = employee.nextLine().toUpperCase();
     switch (name) {
-        case "NF100":
-            System.out.println("Employee's name is " + serviceCat[1][2]);
-            System.out.println("Employee's service is " + serviceCat[1][0]);
+        case "INTERNAL AUDIT":
+            System.out.println("Your service is " + serviceCat[1][0]);
+            System.out.println("Employee's name is " + serviceCat[1][1]);
             System.out.println("Employee's email address: " + serviceCat[1][3]);
             break;
-        case "VN200":
-            System.out.println("Employee's name is " +serviceCat[2][2]);
-            System.out.println("Employee's service is " + serviceCat[2][0]);
+        case "BUSINESS TAX":
+            System.out.println("Your service is " + serviceCat[2][0]);
+            System.out.println("Employee's name is " +serviceCat[2][1]);
             System.out.println("Employee's email address: " + serviceCat[2][3]);
             break;
-        case "NH300":
-            System.out.println("Employee's name is " +serviceCat[3][2]);
-            System.out.println("Employee's service is " + serviceCat[3][0]);
+        case "INDIVIDUAL TAX":
+            System.out.println("Your service is " + serviceCat[3][0]);
+            System.out.println("Employee's name is " +serviceCat[3][1]);
             System.out.println("Employee's email address: " + serviceCat[3][3]);
             break;
-        case "SD400" :
-            System.out.println("Employee's name is " + serviceCat[4][2]);
-            System.out.println("Employee's service is " + serviceCat[4][0]);
+        case "CONSULTING" :
+            System.out.println("Your service is " + serviceCat[4][0]);
+            System.out.println("Employee's name is " + serviceCat[4][1]);
             System.out.println("Employee's email address: " + serviceCat[4][3]);
             break;
-        case "HA500" :
-            System.out.println("Employee's name is " + serviceCat[5][2]);
-            System.out.println("Employee's service is " + serviceCat[5][0]);
+        case "ACCOUNTING" :
+            System.out.println("Your service is " + serviceCat[5][0]);
+            System.out.println("Employee's name is " + serviceCat[5][1]);
             System.out.println("Employee's email address: " + serviceCat[5][3]);
             break;
         default:
-            System.out.println("Invalid Employee ID");
+            System.out.println("No Service Is Found");
     }
         }
     }
