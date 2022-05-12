@@ -17,6 +17,6 @@ public class Question {
                 default:
                     System.out.println("Not an option. Try again.");
             }
-        } while(i!=1&&i!=2);
+        } while(i!=1||i!=2);
     }
 }
