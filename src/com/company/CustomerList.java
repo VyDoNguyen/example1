@@ -1,15 +1,15 @@
 package com.company;
 
-public class demo extends customerData{
-    demo(String Name, String phoneNum, String Dob, String emailAddress, String service) {
+public class CustomerList extends customerData{
+    CustomerList(String Name, String phoneNum, String Dob, String emailAddress, String service) {
         super(Name, phoneNum, Dob, emailAddress, service);
     }
 
-    public demo() {
+    public CustomerList() {
         super();
     }
 
-    public void demo (){
+    public void CustomerList (){
         //Accounting Firm
         //1. Customer database
         customerData data= new customerData("Alex Brown","414-512-6666","01/28/1990","alexbrown@gmail.com","Internal Audit");

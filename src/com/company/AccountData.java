@@ -4,8 +4,8 @@ public class AccountData extends AccountDisplay {
     private String name="Alex Brown";
     private String email="alexbrown@gmail.com";
     private String address="1000 Hilltop Cir, Baltimore, MD";
-    private String phoneNum="410-455-1000";
-    private String dateOfBirth="October 13 2000";
+    private String phoneNum="414-452-6666";
+    private String dateOfBirth="January 28, 1990";
     private final String[] confirmedRequestedServices = new String[]{"Internal Audit"};
     private final String[] assignedEmployees = new String[]{"Noah Fein"};
 
