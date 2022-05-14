@@ -26,11 +26,11 @@ public class Main {
                     String haveAccount = thescn.next();
                     if (haveAccount.equals("y") || haveAccount.equals("Y")) {
                         System.out.println("call login");
-                        loginPage.userLogin(list);
+                        CustomerLoginPage.userLogin(list);
                         valid = true;
                     } else if (haveAccount.equals("n") || haveAccount.equals("N")) {
                         System.out.println("call create account");
-                        User user = loginPage.createAccount(list);
+                        User user = CustomerLoginPage.createAccount(list);
                         list.add(user);
                         valid = true;
                     } else {

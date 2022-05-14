@@ -41,9 +41,6 @@ public class EmployeeLoginPage {
             String ID = fname.charAt(0) + lname.charAt(0) + num;
 
             //make sure the ID doesn't already exist
-
-
-
             boolean upperFlag = false;
             boolean lowerFlag = false;
             boolean lengthFlag = false;
@@ -62,7 +59,6 @@ public class EmployeeLoginPage {
                         "At least one uppercase and one lower case letter: ");
                 String password = empID.nextLine();
     //            System.out.println(ID);
-
 
 
                 if (password.length() >= 5){
