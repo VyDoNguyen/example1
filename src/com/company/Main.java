@@ -10,8 +10,10 @@ public class Main {
         //user[] userData = new user[1];
         //userData[0] = new user("bob1", "dhhjhcv", "fnvkng@yahoo.com");
         ArrayList<User> list = new ArrayList<User>();
-        list.add(new User("bob123423", "122Dghghg", "toyyy@yahoo.com"));
-        list.add(new User("tom987654", "Wash23", "puff12@gmail.com"));
+        list.add(new User("alexbrown", "AlexBrown128", "alexbrown@gmail.com"));
+        list.add(new User("juliekim", "JulieKim228", "juliekim@gmail.com"));
+        list.add(new User("willsmiths", "WillSmiths328", "willsmiths@yahoo.com"));
+        list.add(new User("annachoi", "AnnaChoi428", "annachoi@gmail.com"));
         System.out.println("Welcome to 123 Accounting Firm");
         Scanner thescn = new Scanner(System.in);
         boolean validAnswer = false;
