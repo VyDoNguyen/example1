@@ -9,6 +9,7 @@ public class CustomerLoginPage {
     public static String theUserEmail;
     public static String PhoneNumber;
     public static String TheUserDob;
+    public static String userAddress;
 
 
     public static String getPassword(ArrayList<String> list) {
@@ -137,6 +138,20 @@ public class CustomerLoginPage {
 
         }
         return TheUserDob;
+    }
+    public static String getUserAddress() {
+        Scanner theScanner = new Scanner(System.in);
+        boolean validAddress = false;
+        while(!validAddress) {
+            System.out.println("Please enter your preferred address: ");
+            userAddress = theScanner.next();
+            if (userAddress != null) {
+                System.out.println("Address saved!");
+                validAddress = true;
+                return userAddress;
+            }
+        }
+        return userAddress;
     }
 
     public static void userLogin(ArrayList<String> list) {

@@ -28,6 +28,7 @@ public class IntroPage {
                         CustomerLoginPage.getEmail();
                         CustomerLoginPage.getPhoneNumber();
                         CustomerLoginPage.getDob();
+                        CustomerLoginPage.getUserAddress();
                         valid = true;
                     } else {
                         System.out.println("Invalid response!");
@@ -36,6 +37,7 @@ public class IntroPage {
                 validAnswer = true;
             } else if (login.equals("e") || login.equals("E")) {
                 System.out.println("call employee login");
+                EmployeeLoginPage.EmployeeLoginPage();
                 validAnswer = true;
             } else {
                 System.out.println("Please enter a valid input!");
