@@ -7,9 +7,17 @@ public class EmployeeLoginPage {
     public static void EmployeeLoginPage(){
         Scanner empID = new Scanner(System.in);
 
-        //Have account or create account
-        System.out.println("Do you have an existing ID? If not, then create a new account (yes/create): ");
-        String id = empID.nextLine().toLowerCase();
+        String storeID;
+        String storePassword;
+        String storeFullName;
+        
+        String id = "";
+        while (id != "yes" || id != "create"){
+            //Have account or create account
+            System.out.println("Do you have an existing ID? If not, then create a new account (yes/create): ");
+            id = empID.nextLine().toLowerCase();
+        }
+        
 
         if (id == "yes"){ //login
 
@@ -19,7 +27,7 @@ public class EmployeeLoginPage {
 
             //password
             System.out.println("Enter your password: ");
-            String password = empID.nextLine();
+            storePassword = empID.nextLine();
 
         }else if (id == "create"){ //create account
 
@@ -38,7 +46,8 @@ public class EmployeeLoginPage {
             System.out.println("Enter last name: ");
             String lname = empID.nextLine().toUpperCase();
             //make username
-            String ID = fname.charAt(0) + lname.charAt(0) + num;
+            storeID = fname.charAt(0) + lname.charAt(0) + num;
+            storeFullName = fname + " " + lname;
 
             //make sure the ID doesn't already exist
             boolean upperFlag = false;
@@ -57,16 +66,16 @@ public class EmployeeLoginPage {
                 System.out.println("Create a password" +
                         "Minimum 5 characters" +
                         "At least one uppercase and one lower case letter: ");
-                String password = empID.nextLine();
-    //            System.out.println(ID);
+                storePassword = empID.nextLine();
+                //            System.out.println(ID);
 
 
-                if (password.length() >= 5){
+                if (storePassword.length() >= 5){
                     lengthFlag = true;
                 }
 
-                for (int i = 0; i<=password.length(); i++) {
-                    char temp = password.charAt(i);
+                for (int i = 0; i<=storePassword.length(); i++) {
+                    char temp = storePassword.charAt(i);
                     if (LOWER.indexOf(temp) != -1) {
                         lowerFlag = true;
                     }
@@ -75,7 +84,7 @@ public class EmployeeLoginPage {
                     }
 
 
-            }
+                }
 
             }
 
@@ -83,4 +92,3 @@ public class EmployeeLoginPage {
 
     }
 }
-
