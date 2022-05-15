@@ -23,7 +23,7 @@ public class AccountData extends AccountDisplay {
         System.out.println("Requested Services Assigned Employee");
         for (i = 0; i < confirmedRequestedServices.length; i++) {
 
-            System.out.println(confirmedRequestedServices[i] + " " + assignedEmployees[i]);
+            System.out.println("Service: "+ confirmedRequestedServices[i] + " with " + assignedEmployees[i]);
 
         }
     }

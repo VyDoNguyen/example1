@@ -64,6 +64,7 @@ public class AccountDisplay {
         int size = 5;
         String[] requestedServices = new String[size];
         String[] assignedEmployee = new String[size];
+
         System.out.println("Please select the services that you would like to request. Press 0 to confirm your requests, Press 9 to go to Main Page");
         System.out.println("Press 1 for Internal Audit, Press 2 for Business Tax, Press 3 for Individual Tax, Press 4 for Consultation, Press 5 for Accounting");
         do {
