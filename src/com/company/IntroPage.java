@@ -1,3 +1,8 @@
+package com.company;
+
+import com.company.AccountData;
+import com.company.CustomerLoginPage;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
