@@ -7,6 +7,7 @@ public class IntroPage {
     public static void IntroPage(ArrayList<String> list) {
         System.out.println("Welcome to 123 Accounting Firm");
         Scanner thescn = new Scanner(System.in);
+        AccountData accountData = new AccountData();
         boolean validAnswer = false;
         while (!validAnswer) {
             System.out.println("Login: 'c' for customer, 'e' for employee");
@@ -19,7 +20,8 @@ public class IntroPage {
                     String haveAccount = thescn.next();
                     if (haveAccount.equals("y") || haveAccount.equals("Y")) {
                         System.out.println("call login");
-                        CustomerLoginPage.userLogin(list);
+                        CustomerLoginPage.userLogin();
+                        accountData.getAccountData();
                         valid = true;
                     } else if (haveAccount.equals("n") || haveAccount.equals("N")) {
                         System.out.println("call create account");

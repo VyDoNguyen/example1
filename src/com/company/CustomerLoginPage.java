@@ -124,7 +124,7 @@ public class CustomerLoginPage {
         //String TheUserDob = null;
         while (!validUserDob) {
             System.out.println("Please enter your date of birth: ");
-            TheUserDob = scanner.next();
+            TheUserDob = scanner.nextLine();
             if (TheUserDob.contains("January") || TheUserDob.contains("February") ||
                     TheUserDob.contains("March") || TheUserDob.contains("April") || TheUserDob.contains("May")
                     || TheUserDob.contains("June") || TheUserDob.contains("July") || TheUserDob.contains("August")
@@ -144,7 +144,7 @@ public class CustomerLoginPage {
         boolean validAddress = false;
         while(!validAddress) {
             System.out.println("Please enter your preferred address: ");
-            userAddress = theScanner.next();
+            userAddress = theScanner.nextLine();
             if (userAddress != null) {
                 System.out.println("Address saved!");
                 validAddress = true;
@@ -163,6 +163,22 @@ public class CustomerLoginPage {
             System.out.println("Please enter your password: ");
             String theUserPassword = theScan.next();
             if (list.contains(theUserPassword) && list.contains(theUserName)) {
+                System.out.println("account found");
+                return;
+            }
+            System.out.println("account not found or incorrect login");
+            validLogin = true;
+        }
+    }
+    public static void userLogin() {
+        Scanner theScan = new Scanner(System.in);
+        boolean validLogin = false;
+        while(!validLogin) {
+            System.out.println("Please enter your username: ");
+            String theUserName = theScan.next();
+            System.out.println("Please enter your password: ");
+            String theUserPassword = theScan.next();
+            if (theUserName.equals("alexbrown12")==true && theUserPassword.equals("Password1000")==true) {
                 System.out.println("account found");
                 return;
             }
