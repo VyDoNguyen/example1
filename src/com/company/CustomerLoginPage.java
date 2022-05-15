@@ -114,7 +114,7 @@ public class CustomerLoginPage {
         return PhoneNumber;
     }
 
-    public static String getDob() {
+    public static String getTheUserDob() {
         Scanner scanner = new Scanner(System.in);
         boolean validUserDob = false;
         while (!validUserDob) {
