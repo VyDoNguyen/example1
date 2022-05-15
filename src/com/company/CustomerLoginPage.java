@@ -175,10 +175,13 @@ public class CustomerLoginPage {
             String theUserPassword = theScan.next();
             if (theUserName.equals("alexbrown12")==true && theUserPassword.equals("Password1000")==true) {
                 System.out.println("account found");
+                validLogin = true;
                 return;
             }
-            System.out.println("account not found or incorrect login");
-            validLogin = true;
+            if (theUserName.equals("alexbrown12")!=true || theUserPassword.equals("Password1000")!=true){
+                System.out.println("account not found or incorrect login");
+            }
+
         }
     }
 }

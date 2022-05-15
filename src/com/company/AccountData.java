@@ -27,8 +27,7 @@ public class AccountData extends AccountDisplay {
 
         }
     }
-    public static void main(String[] args) {
-       new AccountData();
-}}
+
+}
 
 
