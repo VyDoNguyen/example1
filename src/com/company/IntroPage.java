@@ -13,18 +13,15 @@ public class IntroPage {
             System.out.println("Login: 'c' for customer, 'e' for employee");
             String login = thescn.next();
             if (login.equals("c") || login.equals("C")) {
-                System.out.println("call customer login");
                 boolean valid = false;
                 while (!valid) {
                     System.out.println("Do you have an account: 'y' for yes, 'n' for no");
                     String haveAccount = thescn.next();
                     if (haveAccount.equals("y") || haveAccount.equals("Y")) {
-                        System.out.println("call login");
                         CustomerLoginPage.userLogin();
                         accountData.getAccountData();
                         valid = true;
                     } else if (haveAccount.equals("n") || haveAccount.equals("N")) {
-                        System.out.println("call create account");
                         CustomerLoginPage.getPassword(list);
                         CustomerLoginPage.getUsername(list);
                         CustomerLoginPage.getEmail();
@@ -38,7 +35,6 @@ public class IntroPage {
                 }
                 validAnswer = true;
             } else if (login.equals("e") || login.equals("E")) {
-                System.out.println("call employee login");
                 EmployeeLoginPage.EmployeeLoginPage();
                 validAnswer = true;
             } else {

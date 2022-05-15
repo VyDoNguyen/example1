@@ -20,7 +20,6 @@ public class CustomerLoginPage {
         String lastName = sc.next();
         System.out.println("Hello" + " " + firstName + " " + lastName);
         boolean validPassword = false;
-        //String userPassword = null;
         while (!validPassword) {
             System.out.println("Please enter a password: ");
             userPassword = sc.next();
@@ -63,7 +62,6 @@ public class CustomerLoginPage {
     public static String getUsername(ArrayList<String> list) {
         Scanner scan = new Scanner(System.in);
         boolean validUsername = false;
-        //String userName = null;
         while (!validUsername) {
             System.out.println("Please enter a username: ");
             userName = scan.next();
@@ -83,7 +81,6 @@ public class CustomerLoginPage {
     public static String getEmail() {
         Scanner scn = new Scanner(System.in);
         boolean validEmail = false;
-        //String theUserEmail = null;
         while (!validEmail) {
             System.out.println("Please enter your preferred email: ");
             theUserEmail = scn.next();
@@ -103,7 +100,6 @@ public class CustomerLoginPage {
     public static String getPhoneNumber() {
         Scanner theScan = new Scanner(System.in);
         boolean validPhoneNumber = false;
-        //String PhoneNumber = null;
         while (!validPhoneNumber) {
             System.out.println("Please enter your phone number: ");
             PhoneNumber = theScan.next();
@@ -121,7 +117,6 @@ public class CustomerLoginPage {
     public static String getDob() {
         Scanner scanner = new Scanner(System.in);
         boolean validUserDob = false;
-        //String TheUserDob = null;
         while (!validUserDob) {
             System.out.println("Please enter your date of birth: ");
             TheUserDob = scanner.nextLine();
