@@ -4,6 +4,7 @@ import com.company.AccountData;
 import com.company.CustomerLoginPage;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
     public class IntroPage {
@@ -44,15 +45,28 @@ import java.util.Scanner;
                         String haveAccount = thescn.next();
                         if (haveAccount.equals("y") || haveAccount.equals("Y")) {
                             EmployeeProfile.employeeLogin();
-                            accountData.getAccountData();
+                            System.out.println("Welcome back!");
+                            System.out.println("Business Tax");
+                            System.out.println("Vy Nguyen");
+                            System.out.println("VN200");
+                            System.out.println("nguyend4@umbc.edu");
+                            System.out.println("Do you want to see the service catalog?");
+                            String serviceCatalog = thescn.next();
+                            if(serviceCatalog.equals("yes")) {
+                                com.company.serviceCatalog.serviceCatalog();
+                            }else{
+                                System.out.println("okay");
+                                System.out.println("Business Tax");
+                                System.out.println("Vy Nguyen");
+                                System.out.println("VN200");
+                                System.out.println("nguyend4@umbc.edu");
+
+                            }
                             valid = true;
                         } else if (haveAccount.equals("n") || haveAccount.equals("N")) {
                             EmployeeProfile.getEmployeePassword(list);
                             EmployeeProfile.getEmployeeName(list);
                             EmployeeProfile.getEmployeeEmail();
-                            EmployeeProfile.getEmployeeNumber();
-                            EmployeeProfile.getEmployeeDob();
-                            EmployeeProfile.getEmployeeAddress();
                             valid = true;
                         } else {
                             System.out.println("Invalid response!");

@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -21,7 +22,7 @@ public class EmployeeLoginPage {
         }
         
 
-        if (id == "yes"){ //login
+        if (Objects.equals(id, "yes")){ //login
 
             //username
             System.out.println("Enter your username: ");

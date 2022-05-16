@@ -7,18 +7,11 @@ public class EmployeeProfile {
     public static String employeePassword;
     public static String employeeName;
     public static String employeeEmail;
-    public static String employeeNumber;
-    public static String employeeDob;
-    public static String employeeAddress;
+
 
 
     public static String getEmployeePassword(ArrayList<String> list) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("What is your first name?");
-        String firstName = sc.next();
-        System.out.println("What is your last name?");
-        String lastName = sc.next();
-        System.out.println("Hello" + " " + firstName + " " + lastName);
         boolean validPassword = false;
         while (!validPassword) {
             System.out.println("Please enter a password: ");
@@ -97,75 +90,6 @@ public class EmployeeProfile {
         return employeeEmail;
     }
 
-    public static String getEmployeeNumber() {
-        Scanner theScan = new Scanner(System.in);
-        boolean validPhoneNumber = false;
-        while (!validPhoneNumber) {
-            System.out.println("Please enter your phone number: (eg: 410-442-5555) ");
-            employeeNumber = theScan.next();
-            if (employeeNumber.length() == 12 && employeeNumber.contains("-")) {
-                System.out.println("Phone number saved!");
-                validPhoneNumber = true;
-                return employeeNumber;
-            } else {
-                System.out.println("Please enter a valid phone number!");
-            }
-        }
-        return employeeNumber;
-    }
-
-    public static String getEmployeeDob() {
-        Scanner scanner = new Scanner(System.in);
-        boolean validUserDob = false;
-        while (!validUserDob) {
-            System.out.println("Please enter your date of birth: (eg January 25, 2000) ");
-            employeeDob = scanner.nextLine();
-            if (employeeDob.contains("January") || employeeDob.contains("February") ||
-                    employeeDob.contains("March") || employeeDob.contains("April") || employeeDob.contains("May")
-                    || employeeDob.contains("June") || employeeDob.contains("July") || employeeDob.contains("August")
-                    || employeeDob.contains("September") || employeeDob.contains("October") || employeeDob.contains("November")
-                    || employeeDob.contains("December")) {
-                System.out.println("Date of birth saved!");
-                validUserDob = true;
-                return employeeDob;
-            }
-
-
-        }
-        return employeeDob;
-    }
-
-    public static String getEmployeeAddress() {
-        Scanner theScanner = new Scanner(System.in);
-        boolean validAddress = false;
-        while (!validAddress) {
-            System.out.println("Please enter your preferred address: ");
-            employeeAddress = theScanner.nextLine();
-            if (employeeAddress != null) {
-                System.out.println("Address saved!");
-                validAddress = true;
-                return employeeAddress;
-            }
-        }
-        return employeeAddress;
-    }
-
-    public static void employeeLogin(ArrayList<String> list) {
-        Scanner theScan = new Scanner(System.in);
-        boolean validLogin = false;
-        while (!validLogin) {
-            System.out.println("Please enter your username: ");
-            String employeeName = theScan.next();
-            System.out.println("Please enter your password: ");
-            String employeePassword = theScan.next();
-            if (list.contains(employeePassword) && list.contains(employeeName)) {
-                System.out.println("account found");
-                return;
-            }
-            System.out.println("account not found or incorrect login");
-            validLogin = true;
-        }
-    }
 
     public static void employeeLogin() {
         Scanner theScan = new Scanner(System.in);
@@ -175,12 +99,12 @@ public class EmployeeProfile {
             String theEmployeeUserName = theScan.next();
             System.out.println("Please enter your password: ");
             String theUserPassword = theScan.next();
-            if (theEmployeeUserName.equals("nguyend4") == true && employeePassword.equals("Nguyen2000") == true) {
+            if (theEmployeeUserName.equals("nguyend4") && theUserPassword.equals("Nguyen2000")) {
                 System.out.println("account found");
                 validLogin = true;
                     return;
                 }
-            if (theEmployeeUserName.equals("nguyend4") != true || theUserPassword.equals("Nguyen2000") != true) {
+            if (!theEmployeeUserName.equals("nguyend4") || !theUserPassword.equals("Nguyen2000")) {
                 System.out.println("account not found or incorrect login");
             }
         }
