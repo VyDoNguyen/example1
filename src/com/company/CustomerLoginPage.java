@@ -119,6 +119,7 @@ public class CustomerLoginPage {
         boolean validUserDob = false;
         while (!validUserDob) {
             System.out.println("Please enter your date of birth: ");
+            System.out.println("Type out full Month day and year");
             TheUserDob = scanner.nextLine();
             if (TheUserDob.contains("January") || TheUserDob.contains("February") ||
                     TheUserDob.contains("March") || TheUserDob.contains("April") || TheUserDob.contains("May")
