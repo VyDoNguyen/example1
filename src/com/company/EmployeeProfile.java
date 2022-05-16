@@ -175,28 +175,15 @@ public class EmployeeProfile {
             String theEmployeeUserName = theScan.next();
             System.out.println("Please enter your password: ");
             String theUserPassword = theScan.next();
-            if (theEmployeeUserName.equals("nguyend4") == true && employeePassword.equals("Nguyend4") == true) {
+            if (theEmployeeUserName.equals("nguyend4") == true && employeePassword.equals("Nguyen2000") == true) {
                 System.out.println("account found");
                 validLogin = true;
-                return;
-            }
-            if (theEmployeeUserName.equals("nguyend4") != true || theUserPassword.equals("Nguyend4") != true) {
+                    return;
+                }
+            if (theEmployeeUserName.equals("nguyend4") != true || theUserPassword.equals("Nguyen2000") != true) {
                 System.out.println("account not found or incorrect login");
             }
         }
     }
 
-    public static void serviceCatalog() {
-        Scanner theScan = new Scanner(System.in);
-        boolean validLogin = false;
-        while (!validLogin) {
-            System.out.println("Do you want to assess staffs' information? ( y or n): ");
-            Scanner answer = new Scanner(System.in);
-            String ans = theScan.next();
-            if (answer.equals("y") == true) {
-                return;
-            }
-            System.out.println("Thank You");
-        }
-    }
 }
