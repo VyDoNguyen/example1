@@ -1,9 +1,11 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Random;
 
 public class EmployeeLoginPage {
+    static ArrayList<String> thelist = new ArrayList<>();
     public static void EmployeeLoginPage(){
         Scanner empID = new Scanner(System.in);
 
@@ -28,6 +30,9 @@ public class EmployeeLoginPage {
             //password
             System.out.println("Enter your password: ");
             storePassword = empID.nextLine();
+            if(thelist.contains(username) && thelist.contains(storePassword)) {
+                serviceCatalog.serviceCatalog();
+            }
 
         }else if (id == "create"){ //create account
 
@@ -48,6 +53,7 @@ public class EmployeeLoginPage {
             //make username
             storeID = fname.charAt(0) + lname.charAt(0) + num;
             storeFullName = fname + " " + lname;
+            thelist.add(storeFullName);
 
             //make sure the ID doesn't already exist
             boolean upperFlag = false;
@@ -67,6 +73,7 @@ public class EmployeeLoginPage {
                         "Minimum 5 characters" +
                         "At least one uppercase and one lower case letter: ");
                 storePassword = empID.nextLine();
+                thelist.add(storePassword);
                 //            System.out.println(ID);
 
 
