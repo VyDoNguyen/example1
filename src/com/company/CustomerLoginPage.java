@@ -102,6 +102,7 @@ public class CustomerLoginPage {
         boolean validPhoneNumber = false;
         while (!validPhoneNumber) {
             System.out.println("Please enter your phone number: ");
+            System.out.println("Use format xxx-xxx-xxxxx");
             PhoneNumber = theScan.next();
             if (PhoneNumber.length() == 12 && PhoneNumber.contains("-")) {
                 System.out.println("Phone number saved!");
